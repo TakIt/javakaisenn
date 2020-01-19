@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>atack</title>
+</head>
+<body>
+<p>攻撃座標</p>
+    <div>
+        <label>縦（０〜４）：<input type="number" name="atack1" min="0" max="4" required></label>
+        <label>横（０〜４）：<input type="number" name="atack2" min="0" max="4"required></label>
+        <button id="submit">攻撃</button>
+
+    </div>
+<div>
+    <table border>
+        <p>プレイヤー座標</p>
+        <thead>
+        <tr><th>　</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+        </thead>
+        <tr th:each="word : ${list}">
+            <td th:text="${word.}"></td>
+        </tr>
+    </table>
+</div>
+<div>
+<table border>
+    <p>CPU座標</p>
+    <thead>
+    <tr><th>　</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+    </thead>
+
+    <script type="text/javascript">
+
+        for(x=0;x<=4;x++){
+            document.write("<tr>");
+            for(y=0;y<=4;y++){
+                if(y===0){
+                    document.write("<td>",x,"</td>");
+                }
+                    document.write("<td>", "　", "</td>");
+            }
+            document.write("</tr>");
+
+        }
+        var ex=Math.floor(Math.random()*5);
+        var ey=Math.floor(Math.random()*5);
+    </script>
+</table>
+</div>
+</body>
+</html>

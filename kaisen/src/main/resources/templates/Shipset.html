@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipset</title>
+</head>
+<body>
+<script type="text/javascript"src="../static/table.js"></script>
+<form name="param"action="#">
+<p>戦艦の位置を決めてください</p>
+<div>
+    <label>縦（０〜４）：<input type="number" name="num1" id="num1" min="0" max="4" required></label>
+    <label>横（０〜４）：<input type="number" name="num2" id="num2" min="0" max="4" required></label>
+    <button id="submit" onclick="func()">攻撃</button>
+</div>
+</form>
+<div id="answer"></div>
+</body>
+</html>
